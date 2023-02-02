@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios 12-14 JS</title>
+</head>
+<body>
+    <h2>Ejercicios JS</h2>
+    <script>
+//12) Programa una función que determine si un número es primo (aquel que solo es divisible por sí mismo y 1) o no, pe. miFuncion(7) devolverá true.
+function primo(n){
+    let divisible = false
+    for(let i = 2; i < n; i++){
+        if ((n % i) === 0) {
+            divisible = true
+            break;
+        }
+    }
+    return (divisible)
+        ? console.log(`${n} no es primo`) 
+        : console.log(`${n} es primo`)
+}
+primo(4)
+primo(200)
+// 13) Programa una función que determine si un número es par o impar, pe. miFuncion(29) devolverá Impar.
+function parImpar(n){
+    if(n % 2 == 0){
+        console.log("par");
+    }else if(n % 2 != 0){
+        console.log("impar");
+    }
+}
+// parImpar(29)
+// 14) Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F.
+function grados(n,g){
+    g = g.toLowerCase()
+    let resultado = null;
+    if(g == "c"){
+        resultado = (n * 9/5) + 32
+        console.log(`${resultado.toFixed(2)} °F`);
+    }else if(g == "f"){
+        resultado = (n - 32) * 5/9
+        console.log(`${resultado.toFixed(2)} °C`);
+    }
+}
+// grados(0,"c")
+    </script>
+</body>
+</html>
